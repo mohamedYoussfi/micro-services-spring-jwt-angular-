@@ -1,0 +1,22 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let c of customers">
+           <td>{{c.name}}</td>
+           <td>{{c.email}}</td>
+           <td>
+             <button (click)="deleteCustomer(c)" class="btn btn-danger">Delete</button>
+           </td>
+         </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

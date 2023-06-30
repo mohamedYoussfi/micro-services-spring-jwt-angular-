@@ -1,0 +1,14 @@
+<div class="p-3">
+  <div class="card" *ngIf="authService.isAuthenticated">
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item">Name : {{authService.profile.name}}</li>
+        <li class="list-group-item"> Roles :
+          <span class="badge bg-primary m-2 p-2" *ngFor="let a of authService.profile.authorities">
+            {{a.authority}}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
